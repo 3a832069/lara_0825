@@ -9,7 +9,11 @@
     <meta name="author" content="">
 
     <title>@yield('title')</title>
-
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/all.min.css')}}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="{{asset('css/clean-blog.min.css')}}" rel="stylesheet">
 
 
 </head>
@@ -17,14 +21,14 @@
 <body>
 
 @include('layouts.partials.navigations')
-
 @yield('content')
-
-
 <hr>
-
 @include('layouts.partials.footer')
-
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
+<script src="{{asset('js/clean-blog.min.js')}}"></script>
 
 
 </body>
