@@ -60,9 +60,14 @@ Route::get('/', function () {
 //      $fourthPost=Post::find(4);
 //      dd($fourthPost);
 
-    $lastPost=Post::orderBy('id', 'DESC')->first();
-    dd($lastPost);
+//    $lastPost=Post::orderBy('id', 'DESC')->first();
+//    dd($lastPost);
 
+    $post=Post::find(4);
+    echo $post -> title.'<br>';
+    foreach ($post->comments as $comment){
+        echo $comment->content.'<br>';
+    }
 
 });
 Route::get('posts', [PostsController::class, 'index'])->name('posts.index');
