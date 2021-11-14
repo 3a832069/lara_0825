@@ -25,7 +25,10 @@ Route::get('/', function () {
 //        'title'=>'test title10',
 //        'content'=>'test content10'
 //    ]);
-    $post=Post::all();
+//    $post=Post::all();
+//    dd($post);
+
+    $post=Post::find(1);
     dd($post);
 
 
